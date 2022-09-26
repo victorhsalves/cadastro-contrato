@@ -1,0 +1,13 @@
+.login-div {
+    width: 50%;
+    margin-left:15%;
+    align-items: center;
+}
+
+input {
+    width: auto;
+    margin: 0;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid gray;
+}
