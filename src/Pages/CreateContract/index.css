@@ -2,19 +2,35 @@
     width: auto;
 } */
 
-.row .input{
+/* .card {
+    width: auto;
+    margin-bottom: 15px;
+} */
+
+.contractForm .input {
     display: inline-block;
-    flex-direction: row;
-    border: 1px solid black;
 
     width: 30%;
     height: 50px;
 }
 
-.row {
-    justify-content: space-between;
-    align-content: space-between;
-    align-items: center;
+.productForm .input {
+    display: inline-block;
+
+    margin: 0px 20px;
+
+    width: 10%;
+    height: auto;
+}
+
+.contractForm {
     width: 100%;
-    border: 1px solid black;
+    height: auto;
+}
+
+
+.productForm {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
 }

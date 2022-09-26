@@ -7,7 +7,7 @@ import { UserContext } from '../../Context/UserContext';
 
 function NavBar() {
     const { user } = React.useContext(UserContext);
-    if (user.token != '') {
+    // if (user.token != '') {
         return (
             <Header>
                 <div className="logo" />
@@ -23,22 +23,22 @@ function NavBar() {
                 </Menu>
             </Header>
         )
-    }
-    else {
-        return (
-            <Header>
-                <div className="logo" />
-                <Menu
-                    theme="dark"
-                    mode="horizontal"
-                > 
-                    <Menu.Item key={1}><Link to="/" >Home</Link></Menu.Item>
-                    <Menu.Item key={2}><Link to="/login" >Login</Link></Menu.Item>
+    // }
+    // else {
+    //     return (
+    //         <Header>
+    //             <div className="logo" />
+    //             <Menu
+    //                 theme="dark"
+    //                 mode="horizontal"
+    //             > 
+    //                 <Menu.Item key={1}><Link to="/" >Home</Link></Menu.Item>
+    //                 <Menu.Item key={2}><Link to="/login" >Login</Link></Menu.Item>
     
-                </Menu>
-            </Header>
-        )
-    }
+    //             </Menu>
+    //         </Header>
+    //     )
+    // }
 }
 
 export default NavBar;
