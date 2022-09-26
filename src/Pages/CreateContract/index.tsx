@@ -1,5 +1,7 @@
+import './index.css';
 import { useState } from "react";
 import SelectInput from "../../Components/SelectInput";
+import LoginInput from "../../Components/TextInput";
 
 type OptionsType = {
     key: string,
@@ -24,21 +26,108 @@ const statesOptions = [
 function CreateContracts() {
     const [country, setCountry] = useState<string>('');
     const [state, setState] = useState<string>('');
+    const [city, setCity] = useState<string>('');
+    const [docNumber, setDocNumber] = useState<string>('');
+    const [socialReason, setSocialReason] = useState<string>('');
+    const [address, setAddress] = useState<string>('');
+    const [district, setDistrict] = useState<string>('');
+    const [number, setNumber] = useState<string>('');
+    const [zipCode, setZipCode] = useState<string>('');
+    const [email, setEmail] = useState<string>('');
+    const [phone, setPhone] = useState<string>('');
+    const [startDate, setStartDate] = useState<string>('');
+    const [endDate, setEndDate] = useState<string>('');
+    const [dueDay, setDueDay] = useState<string>('');
+    const [file, setFile] = useState<string>('');
 
     return (
         <>
-            <SelectInput 
-                options={countriesOptions} 
-                father={''} 
-                onChange={(value) => setCountry(value)} 
+        <div className='row'>
+            <SelectInput
+                options={countriesOptions}
+                father={''}
+                onChange={(value) => setCountry(value)}
                 description={'País'}
             />
-            <SelectInput 
-                options={statesOptions} 
-                father={country} 
-                onChange={(value) => setState(value)} 
+            <SelectInput
+                options={statesOptions}
+                father={country}
+                onChange={(value) => setState(value)}
                 description={'Estado'}
-                />
+            />
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setCity(value)}
+            />
+        </div>
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setDocNumber(value)}
+            />
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setSocialReason(value)}
+            />
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setAddress(value)}
+            />
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setDistrict(value)}
+            />
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setNumber(value)}
+            />
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setZipCode(value)}
+            />
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setEmail(value)}
+            />
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setPhone(value)}
+            />
+            {/* Date */}
+            {/* Date */}
+            <LoginInput
+                inputType="text"
+                label='Cidade'
+                message=''
+                required={false}
+                onChange={(value) => setDueDay(value)}
+            />
         </>
     )
 

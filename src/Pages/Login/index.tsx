@@ -10,8 +10,8 @@ import LoginInput from '../../Components/TextInput';
 function Login() {
 
     const { setUser } = React.useContext(UserContext);
-    const [ usernameInput, setUsernameInput ] = useState('');
-    const [ passwordInput, setPasswordInput ] = useState('');
+    const [usernameInput, setUsernameInput] = useState('');
+    const [passwordInput, setPasswordInput] = useState('');
     const navigate = useNavigate();
 
     const onFinish = async (values: any) => {
@@ -39,18 +39,20 @@ function Login() {
                 name="basic-login" labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}
                 onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" className='form'
             >
-                <Form.Item label="Username" name="username"
-                    rules={[{ required: true, message: 'Insira nome de usuário!' }]}
-                >
-                    {/* Componente de input de texto */}
-                    <LoginInput  inputType='text' onChange={(value) => setUsernameInput(value)} />
-                </Form.Item>
-
-                <Form.Item label="Senha" name="password"
-                    rules={[{ required: true, message: 'Insira a senha!' }]}
-                >
-                <LoginInput inputType='password' onChange={(value) => setPasswordInput(value)} />
-                </Form.Item>
+                <LoginInput 
+                    inputType='text' 
+                    label='Username'
+                    message='Preencha o usuário!'
+                    required={true}
+                    onChange={(value) => setUsernameInput(value)} 
+                />
+                <LoginInput 
+                    inputType='password' 
+                    label='Senha'
+                    message='Preencha a senha!'
+                    required={true}
+                    onChange={(value) => setPasswordInput(value)} 
+                />
 
                 <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
                     <Button type="primary" htmlType="submit">

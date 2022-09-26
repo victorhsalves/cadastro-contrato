@@ -11,16 +11,7 @@ function SelectInput(props: { description: string, options: OptionsType[], fathe
 
 
     return (
-        <div className=''>
-            {/* <select onChange={(event) => props.onChange(event.target.value)}>
-                <option value={0} key={0}>Selecione...</option>
-                {props.options.map(row => (
-                    row.father === props.father ?
-                        <option value={row.value} key={row.key}>{row.value}</option>
-                        : ''
-                )
-                )}
-            </select> */}
+        <div className="input">
 
             <Select
                 placeholder={props.description}
